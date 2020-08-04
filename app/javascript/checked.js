@@ -1,7 +1,7 @@
 function check() {
   // 投稿のDOMを取得している
   const posts = document.getElementsByClassName("post");
- 
+  console.log(posts)
   // 取得したDOMを配列に変換している
   postsA = Array.from(posts);
  

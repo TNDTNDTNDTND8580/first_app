@@ -1,6 +1,7 @@
 function memo() {
   const submit = document.getElementById("submit");
   submit.addEventListener("click", (e) => {
+
     const formData = new FormData(document.getElementById("form"));
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/posts", true);
@@ -9,6 +10,7 @@ function memo() {
     XHR.onload = () => {
       const item = XHR.response.post;
       const list = document.getElementById("list");
+      console.log(list)
       const formText = document.getElementById("content");
       const HTML = `
         <div class="post" data-id=${item.id}>
